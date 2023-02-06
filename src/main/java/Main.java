@@ -1,3 +1,5 @@
+import algorithms.searching.BinarySearch;
+import algorithms.searching.LinearSearch;
 import algorithms.sorting.BubbleSort;
 import algorithms.sorting.SelectionSort;
 
@@ -18,11 +20,9 @@ public class Main {
         numberArray[9] = 13;
 
 
-        SelectionSort selectionSort = new SelectionSort();
-        int[] sortedNumberArray = selectionSort.getSortedArray(numberArray);
+        LinearSearch linearSearch = new LinearSearch();
+        int position = linearSearch.getSeachElementPosition(numberArray, -223);
 
-        for (int number : sortedNumberArray) {
-            System.out.println(number);
-        }
+        System.out.println(position);
     }
 }
